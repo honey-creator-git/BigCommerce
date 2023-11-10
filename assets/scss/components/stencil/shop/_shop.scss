@@ -16,7 +16,6 @@
 
 .usa-sauna-des {
   width: 100%;
-  padding: 0px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,8 +63,6 @@
 }
 
 .backyard-oasis {
-  margin-left: 70px;
-  margin-right: 70px;
   margin-bottom: 90px;
 }
 .backyard-oasis .title {
@@ -79,7 +76,6 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
-  padding: 20px;
 }
 
 /* first  */
@@ -329,7 +325,7 @@
 }
 
 .shop-confidence {
-    margin: 0px 70px 120px 70px;
+    margin: 0px 20px 120px 20px;
 }
 .slide-container{
     max-width: 1120px;
@@ -430,8 +426,27 @@
 .swiper-navBtn::after{
   font-size: 35px;
 }
-.swiper-button-next{
-  right: 0;
+.swiper-button-prev:after {
+  left: 10px !important;
+  right: auto;
+  color: white !important;
+}
+.swiper-button-next:after {
+  right: 10px !important;
+  left: auto;
+  color: white !important;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+  content: 'next';
+  font-size: 25px !important;
+  border-radius: 25px;
+  height: 40px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(28, 233, 41);
+  font-weight: 600;
 }
 .swiper-button-prev{
   left: 0;
@@ -449,6 +464,165 @@
     margin: 0 10px;
   }
   .swiper-navBtn{
+    display: none;
+  }
+}
+
+.bring-nature {
+  margin: 0px 20px 40px 20px;
+}
+
+.video-wrapper {
+    height: auto;
+    max-width: 100%;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+  
+.video-wrapper iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    .carousel-container .homepage-section {
+        margin-bottom: 80px;
+    }
+}
+
+.carousel-container .homepage-section .wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1484px;
+    padding: 0 22px;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-container .homepage-section .wrapper .grid--full {
+    margin-left: 0;
+    width: 100% !important;
+}
+
+.carousel-container .homepage-section .wrapper .grid {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.grid--full>.grid__item {
+    padding-left: 0;
+}
+
+.grid__item {
+    flex: 1 1 100%;
+    max-width: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1928px) {
+    .large--one-third {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+    }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1928px) {
+    .large--two-thirds {
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    .lifestyle-carousel .lifestyle-header {
+        padding: 84px 45px;
+        background-color: #bcdaba;
+        border-radius: 10px;
+        margin: 0 6px 0 12px;
+    }
+
+    .lifestyle-carousel .lifestyle-header h2 {
+        margin-bottom: 87px;
+    }
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.custom-h3 {
+    font-size: 28px;
+}
+
+@media only screen and (min-width: 768px) {
+    .custom-h3 {
+        font-size: 32px;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    .view-more-oasis-way .custom-h3 {
+        margin-bottom: 87px;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .carousel-container .lifestyle-carousel a.button.button--primary {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+}
+
+.button.button--primary {
+    background-color: #231f20;
+    color: #fff;
+    border: 2px solid #231f20;
+    padding: 0 43px;
+}
+
+.button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #bcdaba;
+    border: 0 none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Catamaran,Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    height: 40px;
+    letter-spacing: 0;
+    line-height: 40px;
+    padding: 0 30px;
+    position: relative;
+    text-align: center;
+    transition: all .3s ease;
+    white-space: nowrap;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 991px) {
+  .lifestyle-header.text-center a {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 991px) {
+  .carousel-container .lifestyle-carousel .wrapper .text-center .large-up--hide {
     display: none;
   }
 }
