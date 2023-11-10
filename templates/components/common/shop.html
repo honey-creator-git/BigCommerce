@@ -901,4 +901,42 @@
             <div class="swiper-button-prev-fifth swiper-navBtn"></div>
         </div>
     </div>
+    {{#if settings.show_newsletter_box}}
+        <div class="footer-newsletter">
+            <div class="container">
+                {{> components/common/subscription-form}}
+            </div>
+        </div>
+    {{/if}}
+    <div class="come-by-say-hello">
+        <h2 style="text-align: center; margin-top: 0px; margin-bottom: 30px;">Come By and Say Hello</h2>
+        <div class="comebyandsayhello_main_div">
+            <div class="comebyandsayhello_innerbox">
+              <div>
+              <div class="comebyheader">
+                <h1>Address & Hours</h1>
+              </div>
+              <div class="comebybody">
+                <div style="padding:10px 20px;">
+                    <p>
+                        1077 Andover Park East
+                        Tukwila, WA 98188
+                        1-800-567-8036
+                    </p>
+                </div>
+                <div  style="padding:10px 20px;">
+                    <p><b>Showroom Open to the Public</b></p>
+                    <p><b>Monday - Friday:</b></p>
+                    <p>8:30AM - 5:30PM PST</p>
+                    <p><b>Saturdays</b></p>
+                    <p>
+                        11:00AM - 3:00PM PST
+                        (Showroom only, phones closed)
+                    </p>
+                </div>
+              </div>
+              </div>
+            </div>
+        </div>        
+    </div>
 </div>

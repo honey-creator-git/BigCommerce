@@ -899,10 +899,227 @@
 .products-love {
   background: #e5e5e5;
   padding: 10px;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
   height: 480px;
 }
 
 .slide-content-fifth {
   padding: 0px 30px;
+}
+
+.contact-bar-wrapper {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 1;
+  min-height: 115px;
+  margin-bottom: 20px;
+  padding: 22px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-bar-wrapper {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  div.text {
+    padding-right: 34px;
+    text-align: left;
+  }
+}
+
+.contact-bar-wrapper .text {
+  position: relative;
+}
+
+.contact-bar-wrapper .text .heading {
+  font-weight: 800;
+  margin-bottom: 6px!important;
+}
+
+.contact-bar-wrapper svg {
+  max-width: 68px;
+  max-height: 68px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-bar-wrapper svg {
+    margin-right: 29px;
+  }
+}
+
+.contact-bar-wrapper form {
+  width: auto !important;
+  max-width: 100%;
+  margin: auto;
+}
+
+.contact-submit-forms {
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+@media only screen and (max-width: 901px) {
+  .contact-submit-forms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.contact-submit-forms .icon {
+  position: absolute;
+  left: 15px;
+  top: 1.5rem;
+  transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 801px) {
+  .contact-submit-forms .icon {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+    top: 27px !important;
+  }
+}
+
+.button.button--primary {
+  background-color: #231f20;
+  color: #fff;
+  border: 2px solid #231f20;
+  padding: 0 43px;
+}
+
+.button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #bcdaba;
+  border: 0 none;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Catamaran,Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  height: 40px;
+  letter-spacing: 0;
+  line-height: 40px;
+  padding: 0 30px;
+  position: relative;
+  text-align: center;
+  transition: all .3s ease;
+  white-space: nowrap;
+  border-radius: 10px;
+}
+
+.come-by-say-hello {
+  margin-bottom: 50px;
+}
+
+.comebyandsayhello_main_div{
+  background:url(https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/contact-us-image-2.jpg?t=1698228590);
+  background-size:cover;
+  background-repeat:no-repeat;
+  height:500px;
+  
+  display:flex;
+  align-items:center;
+  margin-top:50px;
+  padding-left:20px;
+}
+.comebyandsayhello_innerbox{
+  width:40%;
+  border-radius:20px;
+  background:white;
+  overflow:hidden;
+  
+}
+.comebyheader{
+  background:black;
+}
+ .comebyheader h1{
+   margin-top:0;
+   padding-left:10px;
+   color:white;
+ }
+.comebybody{
+  display:flex;
+  padding:10px 15px;
+}
+.comebyandsayhello_innerbox p{
+ color:black;
+}
+
+.comebyandsayhello_main_div {
+  background: url(https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/contact-us-image-2.jpg?t=1698228590);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  padding-left: 20px;
+}
+
+.comebyandsayhello_innerbox {
+  width: 40%;
+  border-radius: 20px;
+  background: white;
+  overflow: hidden;
+}
+
+.comebyheader {
+  background: black;
+}
+
+.comebyheader h1 {
+  margin-top: 0;
+  padding-left: 10px;
+  color: white;
+}
+
+.comebybody {
+  display: flex;
+  padding: 10px 15px;
+}
+
+.comebyandsayhello_innerbox p {
+  color: black;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .comebyandsayhello_main_div {
+    height: auto;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .comebyandsayhello_innerbox {
+    width: 90%;
+  }
+
+  .comebyheader h1 {
+    text-align: center;
+  }
+
+  .comebybody {
+    padding: 10px;
+  }
 }
