@@ -154,6 +154,40 @@
     }
 }
 
+@media only screen and (max-width: 800px) {
+    .heroCarousel-content {
+        width: 100% !important;
+        background-color: #231f20 !important;
+        padding: 15px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .heroCarousel-content .heroCarousel-title {
+        font-size: 44px;
+        color: white;
+    }
+
+    .heroCarousel-content .heroCarousel-description {
+        font-size: 15px;
+        color: white;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .heroCarousel-content .heroCarousel-action.button {
+        color: white;
+        border: 2px solid white !important;
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+}
+}
+
 .heroCarousel-content {
     background-color: rgba($carousel-bgColor, 1);
     padding: spacing("half") spacing("single") (spacing("double"));

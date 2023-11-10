@@ -425,13 +425,42 @@
                     );
                 });
 
+                var screenWidth = window.innerWidth;
+                if (screenWidth < 801) {
+                    $(".heroCarousel-image").attr(
+                        "src",
+                        "https://cdn11.bigcommerce.com/s-hwtczp2nyx/images/stencil/original/image-manager/hero-banner-sauna7-mobile.jpeg?t=1692848916"
+                    );
+                } else {
+                    $(".heroCarousel-image").attr(
+                        "src",
+                        "https://cdn11.bigcommerce.com/s-ognwsiw9xa/images/stencil/original/carousel/6/hero-banner-sauna10-desktop.jpg?c=1"
+                    );
+                }
+
+                $(window).on('resize', function () {
+                    var screenWidth = window.innerWidth;
+                    if (screenWidth < 801) {
+                        $(".heroCarousel-image").attr(
+                            "src",
+                            "https://cdn11.bigcommerce.com/s-hwtczp2nyx/images/stencil/original/image-manager/hero-banner-sauna7-mobile.jpeg?t=1692848916"
+                        );
+                    } else {
+                        $(".heroCarousel-image").attr(
+                            "src",
+                            "https://cdn11.bigcommerce.com/s-ognwsiw9xa/images/stencil/original/carousel/6/hero-banner-sauna10-desktop.jpg?c=1"
+                        );
+                    }
+                });
             })
             function handleHeaderScroll() {
                 let scrollY = window.scrollY;
                 let screenWidth = window.innerWidth;
                 if (scrollY > 0) {
                     document.getElementById('header').style.top = '0px';
-                    document.getElementById('menu').style.opacity = 0;
+                    if(screenWidth > 801) {
+                        document.getElementById('menu').style.opacity = 0;
+                    }
                 } else {
                     if (screenWidth < 501) {
                         document.getElementById('header').style.top = '25px';
