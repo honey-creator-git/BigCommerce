@@ -144,10 +144,13 @@
     
     /* Styles for mobile screens */
     @media (max-width: 768px) {
-      .header_logoes_section {
-        display: none;
-        /* Additional styles for mobile view */
-      }
+        .header_logoes_bar_inner {
+            display: none;
+        }
+        .header_logoes_section {
+            display: none;
+            /* Additional styles for mobile view */
+        }
     }
 </style>
 
@@ -158,11 +161,12 @@
     }
     
     /* Mobile styles (adjust the max-width as needed) */
-    @media (max-width: 768px) {
+    @media (max-width: 801px) {
         .slider-container {
             display: block; /* Display the slider for mobile */
             overflow: hidden;
             white-space: nowrap;
+            height: 40px;
         }
         .slider-slide {
             display: inline-block;
