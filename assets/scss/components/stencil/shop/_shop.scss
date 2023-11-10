@@ -431,17 +431,17 @@
   right: auto;
   color: white !important;
 }
-.swiper-button-prev-fourth:after, .swiper-button-prev-fifth:after {
+.swiper-button-prev-third:after, .swiper-button-prev-fourth:after, .swiper-button-prev-fifth:after {
   left: 10px !important;
   right: auto;
   color: transparent !important;
 }
-.swiper-button-prev-fourth, .swiper-button-prev-fifth {
+.swiper-button-prev-third, .swiper-button-prev-fourth, .swiper-button-prev-fifth {
   left: 10px !important;
   right: auto;
   color: transparent !important;
 }
-.swiper-button-next-fourth, .swiper-button-next-fifth, .swiper-button-prev-fourth, .swiper-button-prev-fifth {
+.swiper-button-next-third, .swiper-button-next-fourth, .swiper-button-next-fifth, .swiper-button-prev-third, .swiper-button-prev-fourth, .swiper-button-prev-fifth {
   position: absolute;
   top: 50%;
   width: calc(var(--swiper-navigation-size)/ 44 * 27);
@@ -459,12 +459,12 @@
   left: auto;
   color: white !important;
 }
-.swiper-button-next-fourth:after, .swiper-button-next-fifth:after {
+.swiper-button-next-third:after, .swiper-button-next-fourth:after, .swiper-button-next-fifth:after {
   right: 10px !important;
   left: auto;
   color: transparent !important;
 }
-.swiper-button-next-fourth, .swiper-button-next-fifth {
+.swiper-button-next-third, .swiper-button-next-fourth, .swiper-button-next-fifth {
   right: 10px !important;
   right: auto;
   color: transparent !important;
@@ -481,7 +481,7 @@
   background-color: rgb(28, 233, 41);
   font-weight: 600;
 }
-.swiper-button-next-fourth:after, .swiper-button-next-fifth:after, .swiper-button-prev-fourth:after, .swiper-button-prev-fifth:after {
+.swiper-button-next-third:after, .swiper-button-next-fourth:after, .swiper-button-next-fifth:after, .swiper-button-prev-third:after, .swiper-button-prev-fourth:after, .swiper-button-prev-fifth:after {
   content: 'next';
   font-size: 25px !important;
   border-radius: 25px;
@@ -496,12 +496,12 @@
 .swiper-button-prev{
   left: 0;
 }
-.swiper-button-prev-fourth:after, .swiper-button-prev-fifth:after {
+.swiper-button-prev-third:after, .swiper-button-prev-fourth:after, .swiper-button-prev-fifth:after {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%234c71ae'%2F%3E%3C%2Fsvg%3E") !important;
   background-repeat: no-repeat;
 }
 
-.swiper-button-next-fourth:after, .swiper-button-next-fifth:after {
+.swiper-button-next-third:after, .swiper-button-next-fourth:after, .swiper-button-next-fifth:after {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%234c71ae'%2F%3E%3C%2Fsvg%3E") !important;
   background-repeat: no-repeat;
 }
