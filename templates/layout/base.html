@@ -585,7 +585,7 @@
                 },
             });
 
-            var swiper3 = new Swiper(".slide-content-fourth", {
+            var swiper4 = new Swiper(".slide-content-fourth", {
                 slidesPerView: 3,
                 spaceBetween: 25,
                 loop: true,
@@ -611,6 +611,36 @@
                     },
                     950: {
                         slidesPerView: 3,
+                    },
+                },
+            });
+
+            var swiper5 = new Swiper(".slide-content-fifth", {
+                slidesPerView: 4,
+                spaceBetween: 25,
+                loop: true,
+                centerSlide: 'true',
+                fade: 'true',
+                grabCursor: 'true',
+                pagination: {
+                    el: ".swiper-pagination-fifth",
+                    clickable: true,
+                    dynamicBullets: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next-fifth",
+                    prevEl: ".swiper-button-prev-fifth",
+                },
+            
+                breakpoints:{
+                    0: {
+                        slidesPerView: 1,
+                    },
+                    520: {
+                        slidesPerView: 2,
+                    },
+                    950: {
+                        slidesPerView: 4,
                     },
                 },
             });
