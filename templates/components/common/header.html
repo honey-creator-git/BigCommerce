@@ -1,0 +1,114 @@
+<div class="top-bar">
+    <span><strong>Customer rating of 5/5 on Google!</strong></span>
+</div>
+
+<div class="mobile_sidebar_menu_div">
+    <div class="crossdiv">
+      <i class="fa-solid fa-circle-xmark"></i>
+    </div>
+
+    <div class="mobilemenusealldives">
+      <div>
+        <h2><a href="http://localhost:4000/outdoor-saunas/">Outdoor Saunas</a></h2>
+        <ul>
+          <li><a href="http://localhost:4000/shop-all/">Best Sellers</a></li>
+          <li><a href="http://localhost:4000/outdoor-saunas/compact-saunas/">Compact Saunas</a></li>
+          <li><a href="http://localhost:4000/outdoor-saunas/classic-barrel-saunas/">Classic Barrel Saunas</a></li>
+          <li><a href="http://localhost:4000/outdoor-saunas/porch-barrel-saunas/">Porch Barel Saunas</a></li>
+          <li><a href="http://localhost:4000/outdoor-saunas/panorama-saunas/">Panorama Saunas</a></li>
+          <li><a href="http://localhost:4000/outdoor-saunas/cube-saunas/">Cube Saunas</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2><a href="http://localhost:4000/indoor-saunas/">Indoor Saunas</a></h2>
+
+        <ul>
+          <li><a href="http://localhost:4000/indoor-saunas/thermowood-indoor-saunas/">Thermowood Indoor Saunas</a></li>
+          <li><a href="http://localhost:4000/indoor-saunas/indoor-sauna-accessories/">Indoor Sauna Accessories</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2><a href="http://localhost:4000/cold-plunge/">Cold Plunge</a></h2>
+
+        <ul>
+          <li><a href="http://localhost:4000/cold-plunge/chillers/">Chillers</a></li>
+          <li><a href="http://localhost:4000/cold-plunge/plunge-kits/">Plunge Kits</a></li>
+          <li><a href="http://localhost:4000/cold-plunge/plunge-tubs/">Plunge Tubes</a></li>
+          <li><a href="http://localhost:4000/cold-plunge/cold-plunge-accessories/">Cold Plunge Accessoreis</a></li>
+          <li><a href="http://localhost:4000/cold-plunge/hot-tub-accessories/">Hot Tub Accessories</a></li>
+        </ul>
+      </div>
+
+      <div>
+          <h2><a href="http://localhost:4000/shop-all/">Quick Links</a></h2>
+          <ul>
+            <li><a href="http://localhost:4000/fire-ice/">Fire & Ice</a></li>
+            <li><a href="">Sale</a></li>
+          </ul>
+      </div>
+    </div>
+</div>
+
+<header id="header" class="header" role="banner">
+    <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+        <span class="mobileMenu-toggleIcon"></span>
+    </a>
+
+    <div class="header-logo--wrap">
+        <div class="header-logo{{#if theme_settings.logo_size '===' 'original'}} logo-full-size-desktop{{/if}}{{#if theme_settings.logo_size_mobile '===' 'original'}} logo-full-size-mobile{{/if}}">
+            
+            <div class="logo-and-toggle">                
+                {{#if page_type '===' 'default'}}
+                    <h1>{{> components/common/store-logo}}</h1>
+                {{else}}
+                    <div>{{> components/common/store-logo}}</div>
+                {{/if}}
+            </div>
+            
+            <div class="quickSearchWrap" id="quickSearch" aria-hidden="true" tabindex="-1" data-prevent-quick-search-close>
+                {{> components/common/quick-search}}
+            </div>
+            <div class="navUser-wrap">
+                {{> components/common/navigation}}
+            </div>
+        </div>
+    </div>
+
+    <!-- mobile header  -->
+
+    <div class="mobileheadermain">
+        <div class="menuicondiv">
+            <i class="fa-solid fa-align-justify"></i>
+        </div>
+
+        <div class="mobilelogo">
+            <img src="https://cdn11.bigcommerce.com/s-ognwsiw9xa/images/stencil/200x100/vertical_final_1699584833__47827.original.png" />
+        </div>
+
+        <div class="mobilelogo-cart">
+            <a href="#"><img src="https://cdn11.bigcommerce.com/s-hwtczp2nyx/stencil/0c7ecbf0-5977-013c-0ed1-660662f26bf4/e/686f6c80-f1ac-013b-9840-427feb019367/img/navbar/cart-icon.svg" alt="cart"></a>
+        </div>
+    </div>
+
+    <div class="navPages-container" id="menu" data-menu>
+        {{> components/common/navigation-menu}}
+    </div>
+</header>
+{{#unless page_type '===' 'default'}}
+
+{{#if banners.top}}
+<div class="banners" data-banner-location="top">
+    {{#each (limit banners.top_metadata 1)}}
+    <div class="banner" data-event-type="promotion" data-entity-id="{{this.id}}" data-name="{{this.banner-name}}" data-position="{{this.location}}" data-banner-id="{{this.banner-name}}">
+        <div data-event-type="promotion-click">
+            {{{this.content}}}
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{/if}}
+
+{{/unless}}
+
