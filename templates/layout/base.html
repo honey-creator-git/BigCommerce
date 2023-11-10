@@ -232,6 +232,51 @@
                     height: 25px;
                 }
             }
+            
+            .open_close_big_div {
+                background-color: white;
+                min-height: 433px;
+                display: grid;
+                grid-template-columns: 20% 60% 20%;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                border-radius: 0px 0px 15px 15px;
+                z-index: 999;
+                width: 100%;
+                position: absolute;
+            }
+
+            .open_close_big_div .center {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                padding-top: 20px;
+                color: black;
+            }
+
+            .open_close_big_div a{
+                color: black;
+            }
+
+            .open_close_big_div .center ul {
+                list-style: none;
+                padding: 0;
+                margin-top: 30px;
+            }
+
+            .open_close_big_div .center h3{
+                color: black;
+            }
+      
+            .open_close_big_div .center ul li {
+                margin-bottom: 25px;
+                cursor: pointer;
+                color:black;
+            }
+      
+            .open_close_big_div .center .center_right {
+                padding: 0 30px;
+                display: flex;
+                align-items: center;
+            }
         </style>
     </head>
     <body onScroll="handleHeaderScroll()">
@@ -242,7 +287,145 @@
         {{> components/common/footer }}
 
         <script>
+            $(document).ready(function() {
+                // Outdoor
+                $(".open_close_big_div.outdoor").hide();
+                $(".header .header-logo--wrap .quickSearchWrap .center_menu_div li.outdoor").mouseenter(
+                    function() {
+                        $('.open_close_big_div.outdoor').show();
+                        $('.open_close_big_div.indoor').hide();
+                        $('.open_close_big_div.coldplunge').hide();
+                        $(".open_close_big_div.outdoor .center_right img").attr(
+                            "src",
+                            "https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/menu-classic-barrel-saunas.jpg?t=1698150290"
+                        );
+                    }
+                );
+                $(".open_close_big_div.outdoor").mouseenter(function () {
+                    $(".open_close_big_div.outdoor").show();
+                });
+                $(".open_close_big_div.outdoor").mouseleave(function () {
+                    $(".open_close_big_div.outdoor").hide();
+                });
+                $(".best_seller").hover(function () {
+                    $(".center_right img").attr("src", "https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/menu-best-sellers.jpg?t=1698150288");
+                });
+          
+                $(".compact_saunas").hover(function () {
+                    $(".center_right img").attr("src", "https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/menu-classic-barrel-saunas.jpg?t=1698150290");
+                });
+          
+                $(".classic_barrel_saunas").hover(function () {
+                    $(".center_right img").attr("src", "https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/menu-compact-saunas.jpg?t=1698150290");
+                });
+          
+                $(".porch_barel_saunas").hover(function () {
+                    $(".center_right img").attr("src", "https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/menu-panorama-saunas.jpg?t=1698150292");
+                });
+          
+                $(".panorama_saunas").hover(function () {
+                    $(".center_right img").attr("src", "https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/menu-porch-barrel-saunas.jpg?t=1698150293");
+                });
+          
+                $(".cube_saunas").hover(function () {
+                    $(".center_right img").attr("src", "https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/menu-cube-saunas.jpg?t=1698150291");
+                });
 
+                // Indoor
+                $(".open_close_big_div.indoor").hide();
+
+                $(".header .header-logo--wrap .quickSearchWrap .center_menu_div li.indoor").mouseenter(
+                    function () {
+                        $(".open_close_big_div.indoor").show();
+                        $(".open_close_big_div.outdoor").hide();
+                        $(".open_close_big_div.coldplunge").hide();
+
+                        $(".open_close_big_div.indoor .center_right img").attr(
+                        "src",
+                        "https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/menu-indoor-sauna-accessories.jpg?t=1698152020"
+                        );
+                    }
+                );
+
+                $(".open_close_big_div.indoor").mouseenter(function () {
+                    $(".open_close_big_div.indoor").show();
+                });
+          
+                $(".open_close_big_div.indoor").mouseleave(function () {
+                    $(".open_close_big_div.indoor").hide();
+                });
+          
+                $(".thermowood_indoor_saunas").hover(function () {
+                    $(".open_close_big_div.indoor .center_right img").attr(
+                      "src",
+                      "https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/menu-indoor-sauna-accessories.jpg?t=1698152020"
+                    );
+                });
+          
+                $(".indoor_sauna_accessories").hover(function () {
+                    $(".open_close_big_div.indoor .center_right img").attr(
+                      "src",
+                      "https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/menu-thermowood-indoor-saunas.jpg?t=1698152021"
+                    );
+                });
+
+                // Cold Plunge
+                $(".open_close_big_div.coldplunge").hide();
+
+                $(".header .header-logo--wrap .quickSearchWrap .center_menu_div li.coldplunge").mouseenter(
+                    function () {
+                        $(".open_close_big_div.coldplunge").show();
+                        $(".open_close_big_div.indoor").hide();
+                        $(".open_close_big_div.outdoor").hide();
+            
+                        $(".open_close_big_div.coldplunge .center_right img").attr(
+                          "src",
+                          "https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/menu-chillers.jpg?t=1698152118"
+                        );
+                    }
+                )
+
+                $(".open_close_big_div.coldplunge").mouseenter(function () {
+                    $(".open_close_big_div.coldplunge").show();
+                });
+          
+                $(".open_close_big_div.coldplunge").mouseleave(function () {
+                    $(".open_close_big_div.coldplunge").hide();
+                });
+          
+                $(".chillers").hover(function () {
+                    $(".center_right img").attr("src", "https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/menu-chillers.jpg?t=1698152118");
+                });
+          
+                $(".plunge_kites").hover(function () {
+                    $(".center_right img").attr(
+                      "src",
+                      "https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/menu-cold-plunge-accessories.jpg?t=1698152119"
+                    );
+                });
+          
+                $(".plunge_tubes").hover(function () {
+                    $(".center_right img").attr(
+                      "src",
+                      "https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/menu-hot-tub-accessories.jpg?t=1698152120"
+                    );
+                });
+          
+                $(".cold_plunge_accessories").hover(function () {
+                    $(".center_right img").attr(
+                      "src",
+                      "https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/menu-plunge-kits.jpg?t=1698152121"
+                    );
+                });
+          
+                $(".hot_tub_accessories").hover(function () {
+                    $(".center_right img").attr(
+                      "src",
+                      "https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/menu-plunge-tubs.jpg?t=1698152122"
+                    );
+                });
+
+            })
             function handleHeaderScroll() {
                 let scrollY = window.scrollY;
                 let screenWidth = window.innerWidth;
