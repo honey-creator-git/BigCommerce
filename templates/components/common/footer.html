@@ -20,108 +20,141 @@
 
 
                     
-<footer class="footer" role="contentinfo">
-    <h2 class="footer-title-sr-only">{{lang 'footer.title'}}</h2>
-    <div class="container">
-        <section class="footer-info 4a616d6573">
-            <article class="footer-info-col footer-info-dropdown footer-info-col--small" data-section-type="footer-categories">
-                <h5 class="footer-info-heading">
-                    {{lang 'footer.categories'}}
-                    <i class="icon" aria-hidden="true">
-                        <svg><use xlink:href="#icon-downselector" /></svg>
-                    </i>
-                </h5>
-                <ul class="footer-info-list">
-                    {{#each categories}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                    {{#if settings.gift_certificates_enabled}}
-                        <li>
-                            <a href="{{urls.gift_certificate.purchase}}">{{lang 'common.gift_cert'}}</a>
-                        </li>
+<div class="footer_main" style="margin-top: 46px;">
+    
+    <div class="footer_column" style="display: flex; align-items: center; justify-content: flex-start; flex-direction: column; height: 100%; position: relative; bottom: 55px;">
+        <h2></h2>
+        <div class="logofooter">
+            <a href="{{urls.home}}" class="header-logo__link" data-header-logo-link>
+                {{#if settings.store_logo.image}}
+                    {{#if theme_settings.logo_size '===' 'original'}}
+                    <img class="header-logo-image-unknown-size"
+                        src="{{getImage settings.store_logo.image 'logo_size'}}"
+                        alt="{{settings.store_logo.title}}"
+                        title="{{settings.store_logo.title}}">
+                    {{else}}
+                    <img class="header-logo-image"
+                        src="{{getImage settings.store_logo.image 'logo_size'}}"
+                        srcset="{{getImageSrcset1x2x settings.store_logo.image theme_settings.logo_size}}"
+                        alt="{{settings.store_logo.title}}"
+                        title="{{settings.store_logo.title}}">
                     {{/if}}
-                </ul>
-            </article>
-
-            <article class="footer-info-col footer-info-dropdown footer-info-col--small" data-section-type="footer-webPages">
-                <h5 class="footer-info-heading">
-                    {{lang 'footer.navigate'}}
-                    <i class="icon" aria-hidden="true">
-                        <svg><use xlink:href="#icon-downselector" /></svg>
-                    </i>
-                </h5>
-                <ul class="footer-info-list">
-                    {{#each pages}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                    <li>
-                        <a href="{{urls.sitemap}}">{{lang 'sitemap.page_title'}}</a>
-                    </li>
-                </ul>
-            </article>
-        
-            {{#and theme_settings.shop_by_brand_show_footer shop_by_brand.length}}
-                <article class="footer-info-col footer-info-dropdown footer-info-col--small" data-section-type="footer-brands">
-                    <h5 class="footer-info-heading">
-                        {{lang 'footer.brands'}}
-                        <i class="icon" aria-hidden="true">
-                            <svg><use xlink:href="#icon-downselector" /></svg>
-                        </i>
-                    </h5>
-                    <ul class="footer-info-list">
-                        {{#each shop_by_brand}}
-                            <li>
-                                <a href="{{url}}">{{name}}</a>
-                            </li>
-                        {{/each}}
-                        <li><a href="{{urls.brands}}">{{lang 'common.view_all'}}</a></li>
-                    </ul>
-                </article>
-            {{/and}}
-            
-            {{#if theme_settings.social_icons_footer}}
-                <article class="footer-info-col footer-mobile-limited footer-info-col--small" data-section-type="footer-webPages">
-                    <h5 class="footer-info-heading">{{lang 'social.connect'}}</h5>
-                    {{> components/common/social-links}}
-                </article>
-            {{/if}}
-            
-            {{#if settings.address}}
-                <article class="footer-info-col footer-mobile-limited footer-info-col--small" data-section-type="storeInfo">
-                    <h5 class="footer-info-heading footer-store-name">{{settings.store_name}}</h5>
-                    <address>{{nl2br settings.address}}</address>
-                    {{#if settings.phone_number}}
-                        <div class="footer-info-phone">
-                            <i class="icon" aria-hidden="true">
-                                <svg><use xlink:href="#icon-phone" /></svg>
-                            </i>
-                            <a href="tel:{{settings.phone_number}}">{{settings.phone_number}}</a>
-                        </div>
-                    {{/if}}
-                </article>
-            {{/if}}
-        </section>
-        <div class="footer-copyright">
-            {{> components/common/payment-icons}}
-            {{#if theme_settings.show_copyright_footer}}
-                <p class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} </p>
-            {{/if}}
+                {{else}}
+                <span class="header-logo-text">{{settings.store_logo.title}}</span>
+                {{/if}}
+            </a>
         </div>
-        
-        {{#or theme_settings.show_powered_by theme_settings.show_built_by}}
-            <div class="footer-copyright" style="font-size: 12px;">
-                {{#if theme_settings.show_powered_by}}
-                    <p class="powered-by">Powered by <a href="https://www.bigcommerce.com?utm_source=merchant&amp;utm_medium=poweredbyBC" rel="nofollow">BigCommerce</a></p>
-                {{/if}}
-                {{#if theme_settings.show_built_by}}
-                    <p class="powered-by">Theme by <a href="https://www.weizenyoung.com/" rel="nofollow">Weizen Young</a></p>
-                {{/if}}
-            </div>
-        {{/or}}
+        <p>(631) 800-8468</p>
     </div>
-    {{{region name="ssl_site_seal--global"}}}
-</footer>
+    
+    <div class="footer_column">
+        <h2>Address</h2>
+        <p>
+            137 Florida Street, Farmingdale NY 11735
+        </p>
+
+        <h2>Email</h2>
+        <p>
+            support@wellspa.shop
+        </p>
+    </div>
+     
+    <div class="footer_column">
+        <h2>Company</h2>
+        <ul>
+            <li>
+                <a href="https://best-sauna.mybigcommerce.com/about-us/">About Us</a>
+            </li>
+            
+            <li>
+                <a href="https://best-sauna.mybigcommerce.com/contact-us/">Contact Us</a>
+            </li>
+            
+            <li>
+                <a href="https://best-sauna.mybigcommerce.com/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="https://best-sauna.mybigcommerce.com/affiliates/">Affiliates</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer_column">
+        <h2>Help</h2>
+        <ul>
+            <li>
+                <a href="https://best-sauna.mybigcommerce.com/shipping-methods/">Shipping Methods</a>
+            </li>
+            
+            <li>
+                <a href="https://best-sauna.mybigcommerce.com/shipping-returns/">Shipping & Returns</a>
+            </li>
+            
+            <li>
+                <a href="https://best-sauna.mybigcommerce.com/faqs/">FAQs</a>
+            </li>
+            
+            <li>
+                <a href="https://best-sauna.mybigcommerce.com/Warranty">Warranty</a>
+            </li>
+        </ul>
+    </div>
+      
+    <div class="footer_column">
+        <h2>Site</h2>
+        <ul>
+            <li>
+                <a href="/login.php">Sign in</a>
+            </li>
+              
+            <li>
+                <a href="/sale">Sale</a>
+            </li>
+            
+            <li>
+                <a href="https://best-sauna.mybigcommerce.com/customer-photos/">Customer Photos</a>
+            </li>
+            
+            <li>
+                <a href="https://best-sauna.mybigcommerce.com/experience-our-products/">Experience Our Products</a>
+            </li>
+            
+            <li>
+                <a href="/sitemap.php">Sitemap</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer_column">
+        <h2>Follow Us</h2>
+        <ul>
+            <li>
+                <i class="fa-brands fa-facebook-f"></i> 
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--footer bottom bar -->
+
+<div class="footer_bottom_bar">
+    <div>
+        <p>2023 Redwood Outdoors. All Rights Reserved.</p>
+    </div>
+    <div class="footer_bottom_right">
+        <ul>
+            <li>
+                <a href="https://best-sauna.mybigcommerce.com/privacy-policy/">Privacy Policy</a>
+            </li>
+            <li>|</li>
+              <li>
+                <a href="https://best-sauna.mybigcommerce.com/terms-of-service/">Terms Of Services</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
