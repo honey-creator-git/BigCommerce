@@ -41,6 +41,7 @@ blog:
 
     <div class="main full grid-bg">
         <div class="container">
+            {{>  components/common/shop }}
             {{#if products.featured}}
                 {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
             {{/if}}

@@ -61,6 +61,7 @@
             };
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.6/swiper-bundle.min.js" integrity="sha512-BalAj1QDxNKnkwuDTiYL62iR/evB9429/SoJVTK9344Sc1VJtwpC4OFxKNu3vZMtSpbLEre3oCtr0maV3CddRw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         {{~inject 'validationDictionaryJSON' (langJson 'validation_messages')}}
         {{~inject 'validationFallbackDictionaryJSON' (langJson 'validation_fallback_messages')}}
@@ -78,6 +79,7 @@
           crossorigin="anonymous"
           referrerpolicy="no-referrer"
         />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.6/swiper-bundle.min.css" integrity="sha512-trOoBBr/c0fsBG4Yzsw84nudyqyONkrWyyoi6lcJgppKRNL7y8R1crNwB2NAEmwR6A72fcxOtSySFf1Kvie7YQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <style>
             .top-bar {
                 background-color: #231f20;
@@ -484,6 +486,37 @@
 
                 $(".mobile_sidebar_menu_div").slideUp();
                 
+            });
+        </script>
+        <script>
+            var swiper = new Swiper(".slide-content", {
+              slidesPerView: 3,
+              spaceBetween: 25,
+              loop: true,
+              centerSlide: 'true',
+              fade: 'true',
+              grabCursor: 'true',
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+          
+              breakpoints:{
+                  0: {
+                      slidesPerView: 1,
+                  },
+                  520: {
+                      slidesPerView: 2,
+                  },
+                  950: {
+                      slidesPerView: 3,
+                  },
+              },
             });
         </script>
         <script>window.__webpack_public_path__ = "{{cdn 'assets/dist/'}}";</script>

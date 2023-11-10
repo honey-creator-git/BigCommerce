@@ -1,0 +1,454 @@
+.usa-sauna {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.usa-sauna span {
+    font-size: 2rem;
+    color: #333333;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.usa-sauna-des {
+  width: 100%;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.usa-sauna-des p {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  min-height: 16px;
+  text-align: center;
+}
+
+.live-dream-today {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #231f20;
+  padding: 15px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.live-dream-today a {
+  margin-right: 5px;
+  border: 2px solid #fff;
+  padding: 0 45px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Catamaran,Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  height: 40px;
+  letter-spacing: 0;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 10px;
+  transition: all .3s ease;
+  color: white;
+}
+
+.backyard-oasis {
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-bottom: 90px;
+}
+.backyard-oasis .title {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.backyard-oasis .title h2 {
+  text-align: center;
+}
+.main_backyardiv {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 20px;
+}
+
+/* first  */
+  .main_backyardiv_column_first{
+    background:url(https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/outdoor-saunas-homepage.jpg?t=1698225963);
+    background-size:cover;
+    background-repeat:no-repeat;
+    height:400px;
+    border-radius:20px;
+    overflow:none;
+    padding:10px 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .main_backyardiv_column_first h3{
+    color:#231f20;
+    font-size: 28px;
+    font-weight: 600 !important;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .main_backyardiv_column_first h3 {
+        font-size: 32px;
+    }
+  }
+
+  .main_backyardiv_column_first button{
+      
+    color:white;
+    background:black;
+    border-radius:10px;
+    width:150px;
+    padding:10px 30px;
+      
+  }
+
+/* second */
+  .main_backyardiv_column_second{
+    background:url(https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/cold-plunge-kits-homepage.jpg?t=1698225961);
+      background-size:cover;
+      background-repeat:no-repeat;
+    height:400px;
+    border-radius:20px;
+    overflow:none;
+    padding:10px 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .main_backyardiv_column_second h3{
+    color:#231f20;
+    font-size: 28px;
+    font-weight: 600 !important;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .main_backyardiv_column_second h3 {
+        font-size: 32px;
+    }
+  }
+
+  .main_backyardiv_column_second button{
+    
+    color:white;
+    background:black;
+    border-radius:10px;
+    width:150px;
+    padding:10px 30px;
+    
+  }
+
+/* Third */
+  .main_backyardiv_column_third_top{
+    background:url(https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/indoor-saunas-category-page.jpg?t=1698225959);
+      background-size:cover;
+      background-repeat:no-repeat;
+    height:190px;
+    border-radius:20px;
+    overflow:none;
+    padding:10px 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    margin-bottom:10px;
+  }
+  .main_backyardiv_column_third_top h3{
+    color:#231f20;
+    font-size: 28px;
+    font-weight: 600 !important;
+  }
+  @media only screen and (min-width: 768px) {
+    .main_backyardiv_column_third_top h3 {
+        font-size: 32px;
+    }
+  }
+  .main_backyardiv_column_third_top button{
+    
+    color:white;
+    background:black;
+    border-radius:10px;
+    width:100px;
+    
+    padding:10px 0;
+  }
+
+/* Fourth */
+  .main_backyardiv_column_third_bottom{
+    background:url(https://cdn11.bigcommerce.com/s-2eap4oekvs/images/stencil/original/image-manager/accessories-homepage-category-page.jpg?t=1698225958);
+      background-size:cover;
+      background-repeat:no-repeat;
+    height:200px;
+    border-radius:20px;
+    overflow:none;
+    padding:10px 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .main_backyardiv_column_third_bottom h3{
+    color:#231f20;
+    font-size: 28px;
+    font-weight: 600 !important;
+  }
+  @media only screen and (min-width: 768px) {
+    .main_backyardiv_column_third_bottom h3 {
+        font-size: 32px;
+    }
+  }
+  .main_backyardiv_column_third_bottom button{
+    
+    color:white;
+    background:black;
+    border-radius:10px;
+    width:100px;
+   padding:10px 0;
+    
+  }
+
+.main_backyardiv_column_first,
+.main_backyardiv_column_second,
+.main_backyardiv_column_third_top,
+.main_backyardiv_column_third_bottom {
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.main_backyardiv h1 {
+  color: black;
+  text-align: center;
+}
+
+.main_backyardiv a {
+  text-align: center;
+}
+
+.main_backyardiv button {
+  color: white;
+  background: black;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .main_backyardiv {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .main_backyardiv_column_first,
+  .main_backyardiv_column_second {
+    height: 400px;
+  }
+
+  .main_backyardiv_column_third_top {
+    height: 190px;
+  }
+
+  .main_backyardiv_column_third_bottom {
+    height: 200px;
+  }
+}
+
+.main_backyardiv_column_first a {
+  transition: opacity 0.5s ease 0s;
+  opacity: 0;
+}
+
+.main_backyardiv_column_first a:hover button {
+  background-color: #bcdaba;
+  border: 2px solid white;
+}
+
+.main_backyardiv_column_first:hover a {
+  opacity: 1;
+}
+
+.main_backyardiv_column_second a {
+  transition: opacity 0.5s ease 0s;
+  opacity: 0;
+}
+
+.main_backyardiv_column_second a:hover button {
+  background-color: #bcdaba;
+  border: 2px solid white;
+}
+
+.main_backyardiv_column_second:hover a {
+  opacity: 1;
+}
+
+.main_backyardiv_column_third_bottom a {
+  transition: opacity 0.5s ease 0s;
+  opacity: 0;
+}
+
+.main_backyardiv_column_third_bottom a:hover button {
+  background-color: #bcdaba;
+  border: 2px solid white;
+}
+
+.main_backyardiv_column_third_bottom:hover a {
+  opacity: 1;
+}
+
+.main_backyardiv_column_third_top a {
+  transition: opacity 0.5s ease 0s;
+  opacity: 0;
+}
+
+.main_backyardiv_column_third_top a:hover button {
+  background-color: #bcdaba;
+  border: 2px solid white;
+}
+
+.main_backyardiv_column_third_top:hover a {
+  opacity: 1;
+}
+
+.shop-confidence {
+    margin: 0px 70px 120px 70px;
+}
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+}
+.slide-content{
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+.card{
+  border-radius: 25px;
+  background-color: #FFF;
+}
+.image-content,
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.image-content{
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4070F4;
+  border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #4070F4;
+}
+.overlay::after{
+  border-radius: 0 25px 0 0;
+  background-color: #FFF;
+}
+.card-image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #FFF;
+  padding: 3px;
+}
+.card-image .card-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #4070F4;
+}
+.name{
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.description{
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.button{
+  border: none;
+  font-size: 16px;
+  color: #FFF;
+  padding: 8px 16px;
+  background-color: #4070F4;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover{
+  background: #265DF2;
+}
+
+.swiper-navBtn{
+  color: #6E93f7;
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+  color: #4070F4;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+  font-size: 35px;
+}
+.swiper-button-next{
+  right: 0;
+}
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-pagination-bullet{
+  background-color: #6E93f7;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active{
+  background-color: #4070F4;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content{
+    margin: 0 10px;
+  }
+  .swiper-navBtn{
+    display: none;
+  }
+}
