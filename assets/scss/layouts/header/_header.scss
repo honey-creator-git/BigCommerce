@@ -21,6 +21,45 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.mobile-sidebar-menu-header {
+    position: sticky;
+    top: 0px;
+    background: white;
+    height: 65px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 35px;
+}
+
+.mobile-menu-item {
+    padding: 30px;
+    border-top: 1px solid rgba(100, 100, 100, .5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.mobile-menu-item h3:hover {
+    border-bottom: 1px solid black;
+}
+
+.mobile-sub-menu {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    background-color: white;
+    height: calc(100vh - 120px);
+    left: -353px;
+    transition: all 0.5s ease 0s;
+}
+
 .skip-to-main-link {
     background: $header-bg;
     color: $color-textBase;

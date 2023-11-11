@@ -188,14 +188,15 @@
                     border-radius: 0 10px 10px 0;
                     background-color: white;
                     position: relative;
+                    overflow: auto;
+                    padding-top: 0px;
+                    padding-left: 0px;
+                    padding-right: 0px;
                 }
 
                 .crossdiv {
                     text-align: right;
                     color: black;
-                    position: absolute;
-                    left: 20px;
-                    top: 40px;
                 }
 
                 .crossdiv i {
@@ -205,7 +206,6 @@
                 .mobilemenusealldives {
                     display: grid;
                     grid-template-columns: 50% 50%;
-                    padding: 10px 20px;
                 }
           
                 .mobilemenusealldives ul{
@@ -215,14 +215,14 @@
           
                 .mobilemenusealldives h2 a{
                     font-size: 20px;
-                    color: white;
+                    color: black;
                 }
 
                 .mobilemenusealldives ul li a{
                     font-size: 14px;                   
                     word-spacing: 1px;
                     margin-bottom:5px;
-                    color: white;
+                    color: black;
                 }
             }
             
@@ -459,6 +459,8 @@
 
         <script>
             $(document).ready(function() {
+                handleHeaderScroll()
+
                 // Outdoor
                 $(".open_close_big_div.outdoor").hide();
                 $(".header .header-logo--wrap .quickSearchWrap .center_menu_div li.outdoor").mouseenter(
@@ -623,7 +625,7 @@
                         );
                     }
                 });
-            })
+            });
             function handleHeaderScroll() {
                 let differenceY = 150;
                 let scrollY = window.scrollY;
@@ -677,6 +679,43 @@
                 document.getElementById('mobile-sidebar-menu').style.left = '-353px';
                 document.getElementById('exit-off-canvas').style.display = 'none';
             });
+
+            function navigateToOutdoorSubmenu() {
+                document.getElementById('mobile-sub-menu-outdoor').style.left = '0px';
+                document.getElementById('mobile-sub-menu-indoor').style.left = '-353px';
+                document.getElementById('mobile-sub-menu-cold').style.left = '-353px';
+                document.getElementById('mobile-sub-menu-quick').style.left = '-353px';
+            }
+            function navigateToIndoorSubmenu() {
+                document.getElementById('mobile-sub-menu-indoor').style.left = '0px';
+                document.getElementById('mobile-sub-menu-outdoor').style.left = '-353px';
+                document.getElementById('mobile-sub-menu-cold').style.left = '-353px';
+                document.getElementById('mobile-sub-menu-quick').style.left = '-353px';
+            }
+            function navigateToColdSubmenu() {
+                document.getElementById('mobile-sub-menu-cold').style.left = '0px';
+                document.getElementById('mobile-sub-menu-outdoor').style.left = '-353px';
+                document.getElementById('mobile-sub-menu-indoor').style.left = '-353px';
+                document.getElementById('mobile-sub-menu-quick').style.left = '-353px';
+            }
+            function navigateToQuickSubmenu() {
+                document.getElementById('mobile-sub-menu-quick').style.left = '0px';
+                document.getElementById('mobile-sub-menu-outdoor').style.left = '-353px';
+                document.getElementById('mobile-sub-menu-indoor').style.left = '-353px';
+                document.getElementById('mobile-sub-menu-cold').style.left = '-353px';
+            }
+            function redirectToParentMenuOutdoor() {
+                document.getElementById('mobile-sub-menu-outdoor').style.left = '-353px';
+            }
+            function redirectToParentMenuIndoor() {
+                document.getElementById('mobile-sub-menu-indoor').style.left = '-353px';
+            }
+            function redirectToParentMenuCold() {
+                document.getElementById('mobile-sub-menu-cold').style.left = '-353px';
+            }
+            function redirectToParentMenuQuick() {
+                document.getElementById('mobile-sub-menu-quick').style.left = '-353px';
+            }
         </script>
         <script>
             var swiper = new Swiper(".slide-content", {
