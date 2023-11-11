@@ -106,10 +106,6 @@
                 display: none;
             }
             
-            .mobile_sidebar_menu_div {
-                display: none;
-            }
-            
             .header_logoes_bar{
                 display: flex;
                 justify-content: center;
@@ -135,6 +131,11 @@
                 margin-bottom: 0;
                 margin-left: 10px;
             }
+
+            .mobile_sidebar_menu_div {
+                opacity: 0;
+            }
+
             @media only screen and (max-width: 1098px) {
                 .header-logo--wrap {
                     display: none
@@ -172,24 +173,29 @@
           
                 .mobileheadermain .mobilelogo img {
                     max-height: 100%;
-                }
+                }   
                 
                 .mobile_sidebar_menu_div {
-                    background-color: black;
+                    overflow: hidden;
+                    width: 353px;
+                    padding: 40px 20px;
+                    z-index: 99999;
+                    height: 100vh;
                     position: absolute;
                     top: 0;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    width: 100vw;
-                    height: 100vh;
-                    z-index: 99999;
+                    left: -353px;
+                    transition: all 0.5s ease 0s;
+                    border-radius: 0 10px 10px 0;
+                    background-color: white;
+                    position: relative;
                 }
 
                 .crossdiv {
-                    padding: 20px 30px;
                     text-align: right;
-                    color: white;
+                    color: black;
+                    position: absolute;
+                    left: 20px;
+                    top: 40px;
                 }
 
                 .crossdiv i {
@@ -354,6 +360,22 @@
                 display: flex;
                 justify-content: flex-end;
             }
+
+            .exit-off-canvas {
+                display: none;
+                -webkit-backface-visibility: hidden;
+                background: rgba(35,31,32,.6);
+                bottom: 0;
+                box-shadow: -4px 0 4px rgba(0,0,0,.5), 4px 0 4px rgba(0,0,0,.5);
+                cursor: pointer;
+                left: 0;
+                position: absolute;
+                right: 0;
+                -webkit-tap-highlight-color: transparent;
+                top: 0;
+                transition: background .3s ease;
+                z-index: 10002;
+            }
         </style>
     </head>
     <body onScroll="handleHeaderScroll()">
@@ -430,6 +452,10 @@
         {{> components/common/header }}
         {{> components/common/body }}
         {{> components/common/footer }}
+
+        <a class="exit-off-canvas" id="exit-off-canvas" href="#">
+            <span class="is-srOnly">Exit off-canvas</span>
+        </a>
 
         <script>
             $(document).ready(function() {
@@ -637,16 +663,19 @@
             // menu open close code 
 
             $(".menuicondiv").on("click",function(){
-                
-                console.log("Hello, World!");
 
-                $(".mobile_sidebar_menu_div").slideDown();
+                // $(".mobile_sidebar_menu_div").slideDown();
+
+                document.getElementById('mobile-sidebar-menu').style.opacity = 1;
+                document.getElementById('mobile-sidebar-menu').style.left = '0px';
+                document.getElementById('exit-off-canvas').style.display = 'block';
             });
 
             $(".mobile_sidebar_menu_div .crossdiv").on("click",function(){
-
-                $(".mobile_sidebar_menu_div").slideUp();
-                
+                // $(".mobile_sidebar_menu_div").slideUp();
+                document.getElementById('mobile-sidebar-menu').style.opacity = 0;
+                document.getElementById('mobile-sidebar-menu').style.left = '-353px';
+                document.getElementById('exit-off-canvas').style.display = 'none';
             });
         </script>
         <script>

@@ -8,7 +8,7 @@
                     {{#if service '===' 'facebook'}}
                     <a class="socialLinks__link icon icon--{{service}}"
                        title="{{{capitalize service}}}"
-                       href="https://facebook.com/sharer/sharer.php?u={{getVar 'encodedUrl'}}"
+                       href="https://facebook.com/sharer/sharer?u={{getVar 'encodedUrl'}}"
                        target="_blank"
                        rel="noopener"
                        {{{annotation}}}
@@ -91,7 +91,7 @@
     <iframe
         class="facebook{{#if settings.facebook_like_button.verb '===' 'recommend'}}Recommend{{else}}Like{{/if}}Btn"
         style="border:none; overflow:hidden; margin: 0; padding: 0; position:absolute"
-        src="https://www.facebook.com/plugins/like.php?href={{settings.facebook_like_button.href}}&amp;layout=button_count{{#if settings.facebook_like_button.verb '===' 'recommend'}}&amp;action=recommend{{/if}}&amp;colorscheme=light&amp;height=20"
+        src="https://www.facebook.com/plugins/like?href={{settings.facebook_like_button.href}}&amp;layout=button_count{{#if settings.facebook_like_button.verb '===' 'recommend'}}&amp;action=recommend{{/if}}&amp;colorscheme=light&amp;height=20"
         scrolling="no"
         frameborder="0"
         allowTransparency="true">

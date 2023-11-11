@@ -45,7 +45,7 @@
                                 <dt class="definitionList-key">{{name}}:</dt>
                                 <dd class="definitionList-value">
                                     {{#if is_file}}
-                                        <a href="/viewfile.php?attributeId={{id}}&cartitem={{../id}}">{{value}}</a>
+                                        <a href="/viewfile?attributeId={{id}}&cartitem={{../id}}">{{value}}</a>
                                     {{else}}
                                         {{> components/common/product-options}}
                                     {{/if}}
