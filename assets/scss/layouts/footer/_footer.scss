@@ -21,6 +21,15 @@
     transform: translateZ(0); // 3
 }
 
+@media only screen and (max-width: 991px) {
+    .footer_main {
+        display: flex !important;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 .footer-title-sr-only {
     height: 1px;
     left: -10000px;
