@@ -680,6 +680,29 @@
                 document.getElementById('exit-off-canvas').style.display = 'none';
             });
 
+            $("#accordian").on("click", function() {
+                document.getElementById('collapseOne').classList.toggle('display-block');
+            });
+
+            $("#specification").on("click", function() {
+                document.getElementById('collapseTwo').classList.toggle('display-block');
+            });
+
+            $("#shipping").on("click", function() {
+                document.getElementById('collapseThree').classList.toggle('display-block');
+            });
+
+            $("#warranty").on("click", function() {
+                document.getElementById('collapsefour').classList.toggle('display-block');
+            });
+
+            $("#reviews").on("click", function() {
+                document.getElementById('collapsefive').classList.toggle('display-block');
+            });
+
+            $("#addons").on("click", function() {
+                document.getElementById('collapsesix').classList.toggle('display-block');
+            });
             function navigateToOutdoorSubmenu() {
                 document.getElementById('mobile-sub-menu-outdoor').style.left = '0px';
                 document.getElementById('mobile-sub-menu-indoor').style.left = '-353px';
