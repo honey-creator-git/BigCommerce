@@ -22,6 +22,17 @@ ol.breadcrumbs {
     }
 }
 
+.breadcrumb:not(:first-child)::before {
+    border-right: 0.1em solid #a3a3a3 !important;
+    content: "" !important;
+    display: inline-block !important;
+    height: 0.8em !important;
+    margin: 0 0.25rem !important;
+    -webkit-transform: rotate(15deg) !important;
+    transform: rotate(15deg) !important;
+    margin-top: 4px !important;
+}
+
 .breadcrumb {
     display: inline-block;
     float: none;
