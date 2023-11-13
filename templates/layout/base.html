@@ -722,9 +722,31 @@
             $("#addons").on("click", function() {
                 document.getElementById('collapsesix').classList.toggle('display-block');
             });
+
             $("#heater").on("click", function () {
                 document.getElementById('collapseseven').classList.toggle('display-block');
             });
+
+            $("#fag-one").on('click', function () {
+                document.getElementById('flush-collapseOne').classList.toggle('show');
+            });
+
+            $("#fag-two").on('click', function () {
+                document.getElementById('flush-collapseTwo').classList.toggle('show');
+            });
+
+            $("#fag-three").on('click', function () {
+                document.getElementById('flush-collapseThree').classList.toggle('show');
+            });
+
+            $("#fag-four").on('click', function () {
+                document.getElementById('flush-collapsefour').classList.toggle('show');
+            });
+
+            $("#fag-five").on('click', function () {
+                document.getElementById('flush-collapsefive').classList.toggle('show');
+            });
+
             function navigateToOutdoorSubmenu() {
                 document.getElementById('mobile-sub-menu-outdoor').style.left = '0px';
                 document.getElementById('mobile-sub-menu-indoor').style.left = '-353px';
