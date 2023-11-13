@@ -304,6 +304,7 @@ footer .socialLinks{
 .card .card-figure .card-figure__link {
     height: 100%;
     outline-offset: 3px;
+    width: 100%;
 }
 .card .card-image{
     max-height: calc(#{$productGrid-imageHeight} - 6px);
