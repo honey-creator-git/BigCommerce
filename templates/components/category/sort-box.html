@@ -1,7 +1,7 @@
 <fieldset class="form-fieldset actionBar-section">
-    <div class="form-field">
-        <label class="form-label" for="sort">{{lang 'common.sorter.sort_by'}}</label>
-        <select class="form-select form-select--small " name="sort" id="sort" role="listbox">
+    <div class="form-field" style="border-radius: 10px !important; width: 252px !important; display: flex !important; align-items: center !important; justify-content: center !important; padding: 10px !important;">
+        <label style="margin-right: 10px !important; font-size: 16px !important;" class="form-label" for="sort">{{lang 'common.sorter.sort_by'}}</label>
+        <select style="padding-right:1rem !important; font-size: 16px !important; font-weight: 600 !important;" class="form-select form-select--small " name="sort" id="sort" role="listbox">
             <option value="featured" {{#if sort '==' 'featured'}}selected{{/if}}>{{lang 'common.sorter.featured'}}</option>
             <option value="newest" {{#if sort '==' 'newest'}}selected{{/if}}>{{lang 'common.sorter.newest'}}</option>
             <option value="bestselling" {{#if sort '==' 'bestselling'}}selected{{/if}}>{{lang 'common.sorter.top_sellers'}}</option>

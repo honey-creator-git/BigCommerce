@@ -296,6 +296,10 @@ footer .socialLinks{
     flex-flow: column nowrap;
     height: $productGrid-imageHeight;
     justify-content: center;
+
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 .card .card-figure .card-figure__link {
     height: 100%;
@@ -308,9 +312,14 @@ footer .socialLinks{
 .card-img-container:after{display: none;}
 
 .card:hover .card-figcaption{
-    height: auto;
     max-height: 300px;
-    z-index: 5;
+    height: auto;
+    z-index: 999999;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(192, 233, 146);
 }
 
 .card-figcaption{
@@ -375,16 +384,21 @@ footer .socialLinks{
     flex-flow: row wrap;
     height: calc(100% - #{$productGrid-imageHeight});
     text-align: left;
+    align-items: center;
+    justify-content: center;
 }
 .card .card-title{
     align-self: flex-start;
     flex: 0 1 100%;
     font-family: $cardTitle-font;
-    font-size: 15px;
+    font-size: 1.5rem;
     letter-spacing: normal;
     margin: 0;
     text-align: left;
     text-transform: stencilString('category_name_capitalization');
+
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
 .card .card-text{
@@ -399,7 +413,7 @@ footer .socialLinks{
     display: flex;
     flex-flow: row wrap;
 }
-.card .price-section .price{order: 1; margin-right: 10px;}
+.card .price-section .price{order: 1; margin-right: 10px; font-size: 16px; font-weight: 500;}
 .card .price-section .regular-price{order: 2;}
 .card .price-section .price--rrp{order: 3; flex: 1 1 100%;}
 

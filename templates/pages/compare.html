@@ -25,11 +25,11 @@
                                     </svg>
                                 </a>
                             </figure>
-                            <div class="card-body">
+                            <div class="card-body" style="width: 100%;">
                                 {{#if brand.name}}
-                                    <p class="card-text"><a href="{{brand.url}}">{{ brand.name }}</a></p>
+                                    <p class="card-text" style="width: 100%; text-align: center;"><a href="{{brand.url}}">{{ brand.name }}</a></p>
                                 {{/if}}
-                                <h4 class="card-title">
+                                <h4 class="card-title" style="text-align:center;">
                                     <a href="{{url}}">{{ name }}</a>
                                 </h4>
                                 {{#or ../customer (if ../theme_settings.restrict_to_login '!==' true)}}
@@ -53,20 +53,20 @@
                             {{#or ../customer (if ../theme_settings.restrict_to_login '!==' true)}}
                                 {{#if show_cart_action}}
                                     {{#if has_options}}
-                                        <a href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}} class="button button--primary" data-product-id="{{id}}">{{lang 'products.choose_options'}}</a>
+                                        <a style="margin:10px 0px;" href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}} class="button button--primary" data-product-id="{{id}}">{{lang 'products.choose_options'}}</a>
                                     {{/if}}
                                     {{#if pre_order}}
-                                        <a href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}} class="button button--primary" data-product-id="{{id}}">
+                                        <a style="margin:10px 0px;" href="{{url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}} class="button button--primary" data-product-id="{{id}}">
                                             {{lang 'products.pre_order'}}
                                         </a>
                                     {{/if}}
                                     {{#if add_to_cart_url}}
-                                        <a href="{{add_to_cart_url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}} class="button button--primary" data-product-id="{{id}}">
+                                        <a style="margin:10px 0px;" href="{{add_to_cart_url}}" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}} class="button button--primary" data-product-id="{{id}}">
                                             {{lang 'products.add_to_cart'}}
                                         </a>
                                     {{/if}}
                                     {{#if out_of_stock_message}}
-                                        <a href="{{url}}" class="button button--primary" data-product-id="{{id}}">{{out_of_stock_message}}</a>
+                                        <a style="margin:10px 0px;" href="{{url}}" class="button button--primary" data-product-id="{{id}}">{{out_of_stock_message}}</a>
                                     {{/if}}
                                 {{/if}}
                             {{/or}}
