@@ -59,9 +59,25 @@
 
 @media only screen and (min-width: 801px) {
     .page-sidebar {
-        width: 30% !important;
+        width: 26% !important;
     }
     .page-sidebar + .page-content {
-        width: 70% !important;
+        width: 74% !important;
+    }
+}
+
+#submit-btn-container {
+    position: absolute; 
+    bottom: 0px; 
+    left: 0%; 
+    width: 100%; 
+    display: flex !important; 
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+    #submit-btn-container  {
+        bottom: -30px;
     }
 }
