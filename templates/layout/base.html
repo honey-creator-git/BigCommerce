@@ -139,6 +139,10 @@
                 opacity: 0;
             }
 
+            .header-logo--wrap {
+                box-shadow: 0 4px 8px 2px rgba(0, 0, 0, .25);
+            }
+
             @media only screen and (max-width: 1098px) {
                 .header-logo--wrap {
                     display: none
@@ -767,7 +771,7 @@
                         differenceY = scrollY + 100;
                     }
                     document.getElementById('header').style.top = '0px';
-                    if(screenWidth > 801) {
+                    if (scrollY > 139 && screenWidth > 801) {
                         document.getElementById('menu').style.opacity = 0;
                     }
                 } else {

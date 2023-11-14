@@ -71,6 +71,21 @@
     }
 }
 
+.card:hover .card-figcaption{
+    max-height: 300px;
+    height: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(192, 233, 146);
+}
+
+.card:hover .card-image {
+    width: 100%;
+    height: 100%;
+}
+
 .card-figcaption-body {
     display: $card-figcaption-body-display;
     pointer-events: all; // 1
@@ -145,8 +160,13 @@
 }
 
 .card .card-image {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
+    transition: all 0.1s ease 0s;
+    -webkit-transition: all 0.1s ease 0s;
+    -moz-transition: all 0.1s ease 0s;
+    -ms-transition: all 0.1s ease 0s;
+    -o-transition: all 0.1s ease 0s;
 }
 
 
