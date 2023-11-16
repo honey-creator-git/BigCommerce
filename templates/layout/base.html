@@ -493,6 +493,7 @@
             }
             .shipping-return .description {
                 margin-bottom: 30px;
+                text-align: left;
             }
             @media only screen and (min-width: 768px) {
                 .shipping-return .header {
@@ -513,6 +514,9 @@
             }
             .shipping-return .paragraph {
                 margin-bottom: 30px;
+            }
+            #accordionFlushExample button:focus {
+                outline: 0px !important;
             }
         </style>
     </head>
@@ -917,22 +921,32 @@
 
             $("#fag-one").on('click', function () {
                 document.getElementById('flush-collapseOne').classList.toggle('show');
+                document.getElementById('fag-one-icon').classList.toggle('fa-minus');
+                document.getElementById('fag-one-icon').classList.toggle('fa-plus');
             });
 
             $("#fag-two").on('click', function () {
                 document.getElementById('flush-collapseTwo').classList.toggle('show');
+                document.getElementById('fag-two-icon').classList.toggle('fa-minus');
+                document.getElementById('fag-two-icon').classList.toggle('fa-plus');
             });
 
             $("#fag-three").on('click', function () {
                 document.getElementById('flush-collapseThree').classList.toggle('show');
+                document.getElementById('fag-three-icon').classList.toggle('fa-minus');
+                document.getElementById('fag-three-icon').classList.toggle('fa-plus');
             });
 
             $("#fag-four").on('click', function () {
                 document.getElementById('flush-collapsefour').classList.toggle('show');
+                document.getElementById('fag-four-icon').classList.toggle('fa-minus');
+                document.getElementById('fag-four-icon').classList.toggle('fa-plus');
             });
 
             $("#fag-five").on('click', function () {
                 document.getElementById('flush-collapsefive').classList.toggle('show');
+                document.getElementById('fag-five-icon').classList.toggle('fa-minus');
+                document.getElementById('fag-five-icon').classList.toggle('fa-plus');
             });
 
             $("#financing-modal").on('click', function () {
